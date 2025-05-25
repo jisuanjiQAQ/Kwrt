@@ -14,9 +14,9 @@ git clone https://github.com/LiBwrt/nss-packages nss-packages
 
 mv -f nss-packages/* package/feeds/kiddin9/
 
-rm -rf feeds/kiddin9/shortcut-fe feeds/kiddin9/fibocom_QMI_WWAN feeds/kiddin9/quectel_QMI_WWAN feeds/kiddin9/xtables-wgobfs feeds/kiddin9/fullconenat-nft/
+rm -rf feeds/kiddin9/shortcut-fe feeds/kiddin9/fullconenat-nft/
 
-rm -rf package/feeds/packages/ovpn-dco package/feeds/packages/xr_usb_serial_common package/feeds/packages/openvswitch package/feeds/packages/xtables-addons
+rm -rf target/linux/generic/hack-6.6/220-arm-gc_sections.patch
 
 sed -i "s/wpad-openssl/wpad-basic-mbedtls/" target/linux/amlogic/image/Makefile
 
