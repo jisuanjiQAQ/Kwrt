@@ -14,9 +14,11 @@ git clone https://github.com/LiBwrt/nss-packages nss-packages
 
 mv -f nss-packages/* package/feeds/kiddin9/
 
-rm -rf feeds/kiddin9/shortcut-fe feeds/kiddin9/fullconenat-nft/
+rm -rf feeds/kiddin9/fullconenat-nft/
 
 rm -rf target/linux/generic/hack-6.6/220-arm-gc_sections.patch
+
+git_clone_path master https://github.com/coolsnowwolf/lede mv target/linux/generic/hack-6.12
 
 sed -i "s/wpad-openssl/wpad-basic-mbedtls/" target/linux/amlogic/image/Makefile
 
