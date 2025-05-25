@@ -16,11 +16,9 @@ mv -f nss-packages/* package/feeds/kiddin9/
 
 rm -rf feeds/kiddin9/fullconenat-nft/
 
-git_clone_path master https://github.com/coolsnowwolf/lede mv target/linux/generic/hack-6.12
+rm -rf target/linux/generic/hack-6.6/220-arm-gc_sections.patch
 
-rm -rf target/linux/generic/hack-6.6/220-arm-gc_sections.patch target/linux/generic/hack-6.12/{220-arm-gc_sections.patch,410-block-fit-partition-parser.patch,531-debloat_lzma.patch}
-
-sed -i "s/wpad-openssl/wpad-basic-mbedtls/" target/linux/amlogic/image/Makefile
+sed -i "s/wpad-openssl/wpad-basic-mbedtls/" target/linux/qualcommax/image/Makefile
 
 sed -i "s/LiBwrt/Kwrt/Ig" package/base-files/files/bin/config_generate package/base-files/image-config.in package/network/config/wifi-scripts/files/lib/wifi/mac80211.uc config/Config-images.in Config.in include/u-boot.mk include/version.mk || true
 
